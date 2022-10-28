@@ -1,8 +1,12 @@
+require('dotenv').config()
 const express = require('express');
 const app = express(); 
-const games = require('./models/games.js')
+const mongoose = require('mongoose');
+const Game = require('./models/game.js');
 
-//set up view engine 
+
+
+app.use(express.urlencoded({ extended:true }))
 app.set('view engine', 'jsx')
 app.engine('jsx', require('jsx-view-engine').createEngine())
 
@@ -11,7 +15,10 @@ app.engine('jsx', require('jsx-view-engine').createEngine())
 /* Start Config */ 
 app.engine('jsx', require('jsx-view-engine').createEngine())
 app.set('view engine', 'jsx')
-
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connection.once('open', () => {
+    console.log('connected to mongo')
+})
 /* End Config */
 
 /* Start Middleware */
@@ -22,18 +29,39 @@ app.set('view engine', 'jsx')
 
 
 /* Routes */
+
 // Index
-app.get('/gamerish', (req,res) => {
-    res.render('games/Index', {
-        games: games
-        
+app.get('/games', (req,res) => {
+    Game.find({}, (err, allGames) =>{
+        res.render('games/Index', {
+            games: allGames 
+        })
     })
 })
 
+// New
+app.get('/games/new', (req, res) => {
+    res.render('games/New')
+})
+// Delete
+
+// Update
+
+// Create
+app.post('/games', (req,res) => {
+    Game.create(req.body, (err, createdGame) => {
+        res.redirect('/games')
+    })
+})
+
+// Edit
+
 // Show 
-app.get('/gamerish/:id', (req,res) => {
-    res.render('games/Show',{
-        game: games[req.params.id]
+app.get('/games/:id', (req,res) => {
+    Game.findById(req.params.id, (err, foundGame) =>{
+        res.render('games/Show', {
+            game: foundGame
+        })
     })
 })
 

@@ -1,5 +1,5 @@
 const { create } = require('connect-mongo')
-const Game = require('../models/games')
+const Game = require('../models/game')
 
 const dataController = {
     // Index

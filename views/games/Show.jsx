@@ -9,7 +9,6 @@ class Show extends React.Component{
                 {game.name} <br/>
                 {game.releaseDate} <br/>
                 {game.console} <br/>
-                {game.wouldRecommend? 'GET THIS GAME': 'Save your Money'}
             </div>
             
         )
