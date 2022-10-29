@@ -1,26 +1,25 @@
-const { create } = require('connect-mongo')
-const Game = require('../models/game')
+const Game = require('../models/game.js')
 
 const dataController = {
     // Index
-    index(req,res,next){
-        Game.find({}, (err, foundGames) => {
-            if(err){
-                res.status(400).send({
-                    msg:err.message
+    index(req, res, next) {
+        Game.find({}, (err, allGames) => {
+            if (err) {
+                res.status(404).send({
+                    msg: err.message
                 })
             } else {
-                res.locals.data.games = foundGames
+                res.locals.data.games = allGames
                 next()
             }
         })
-    }, 
+    },
     // Delete 
-    delete(req,res,next){
+    delete(req, res, next) {
         Game.findByIdAndDelete(req.params.id, (err, deletedGame) => {
-            if(err){
+            if (err) {
                 res.status(400).send({
-                    msg:err.message
+                    msg: err.message
                 })
             } else {
                 res.locals.data.game = deletedGame
@@ -29,9 +28,9 @@ const dataController = {
         })
     },
     // Update
-    update(req, res, next){
-        Log.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedGame) =>{
-            if(err){
+    update(req, res, next) {
+        Game.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedGame) => {
+            if (err) {
                 res.status(400).send({
                     msg: err.message
                 })
@@ -42,9 +41,9 @@ const dataController = {
         })
     },
     //Create
-        create(req,res, next){
-        Game.create(req.body, (err, createdGame) =>{
-            if(err){
+    create(req, res, next) {
+        Game.create(req.body, (err, createdGame) => {
+            if (err) {
                 res.status(400).send({
                     msg: err.message
                 })
@@ -53,14 +52,14 @@ const dataController = {
                 next()
             }
         })
-    }, 
+    },
     // Show 
-    show(req,res,next){
-        Log.findById(req.params.id, (err, foundGame) =>{
-            if(err){
+    show(req, res, next) {
+        Game.findById(req.params.id, (err, foundGame) => {
+            if (err) {
                 res.status(404).send({
-                    msg: err.message, 
-                    output:' Could not find a game with that id'
+                    msg: err.message,
+                    output: ' Could not find a game with that id'
                 })
             } else {
                 res.locals.data.game = foundGame
@@ -70,4 +69,4 @@ const dataController = {
     }
 }
 
-// module.exports = dataController
+module.exports = dataController

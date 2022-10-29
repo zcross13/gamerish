@@ -13,7 +13,6 @@ class Show extends React.Component {
                     <input type='submit' value='DELETE' />
                 </form>
             </Default>
-
         )
     }
 }
