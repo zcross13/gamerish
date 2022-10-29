@@ -1,12 +1,12 @@
 const React = require('react')
+const Default = require('../layouts/Default')
 
 
 class Index extends React.Component {
     render() {
         const { games } = this.props
         return (
-            <div>
-                <h1>Game Index Page</h1>
+            <Default title='Gamerish'>
                 <ul>
                     {
                         this.props.games.map((game, i) => {
@@ -22,7 +22,7 @@ class Index extends React.Component {
                         })
                     }
                 </ul>
-            </div>
+            </Default>
         )
     }
 }

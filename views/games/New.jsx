@@ -1,10 +1,10 @@
 const React = require('react')
+const Default = require('../layouts/Default')
 
 class New extends React.Component{
     render(){
         return (
-            <div>
-                <h1>New Game Page</h1>
+            <Default title = 'Submit your game here'>
                 <nav>
                     <a href='/games/new'>Create a New Game</a>
                 </nav>
@@ -16,7 +16,7 @@ class New extends React.Component{
                     console:<input name='console'></input><br/>
                     <input type='submit'></input>
                 </form>
-            </div>
+            </Default>
         )
     }
 }
