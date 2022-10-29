@@ -11,8 +11,12 @@ class Index extends React.Component {
                     {
                         this.props.games.map((game, i) => {
                             return (
-                                <li>
-                                    <a href={`/games/${game.id}`}>{game.name}</a>
+                                <li key={game._id}>
+                                    <a href={`/games/${game.id}`}>{game.name}</a><br/>
+                                    <img src={game.image}></img>
+                                    <form action={`/games/${game._id}?_method=DELETE`} method='POST'>
+                                        <input type='submit' value='DELETE'/>
+                                    </form>
                                 </li>
                             )
                         })

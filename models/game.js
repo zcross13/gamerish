@@ -4,10 +4,9 @@ const gameSchema = new mongoose.Schema(
     {
     name: {type: String, require: true}, 
     image: {type: String, require: true},
-    releasedate: {type: String, require: true}, 
+    releaseDate: {type: String, require: true}, 
     price: {type: String, require: true},
-    console: {type: String, require: true }, 
-    wouldRecommend: Boolean
+    console: {type: String, require: true }
     }
 )
 
