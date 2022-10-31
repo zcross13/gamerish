@@ -4,6 +4,7 @@ const commentSchema = new mongoose.Schema(
     {
     username: {type: String, require: true}, 
     text: {type: String, require: true}, 
+    gameId: {type: String, require:true}
 }
 )
 

@@ -18,6 +18,7 @@ class Show extends React.Component {
                 <form action={`/games/${_id}/new`} method='POST'>
                     Username: <input type='text' name='username'></input><br />
                     Comment: <input type='text' name='text'></input><br />
+                    <input type="hidden" name="gameId" value={_id} />
                     <input type='submit' value='Post Comment'></input>
                 </form>
                 <ul className='commentContainer'>

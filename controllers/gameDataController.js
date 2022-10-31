@@ -59,7 +59,7 @@ const gameDataController = {
     // Show 
     grabGame(req, res, next) {
         Game.findById(req.params.id, (err, foundGame) =>{
-            Comment.find({}, (err, listComments) => {
+            Comment.find({gameId: req.params.id}, (err, listComments) => {
                 if(err){
                     res.status(404).send({
                         msg:err.message, 
