@@ -20,13 +20,15 @@ class Show extends React.Component {
                     Comment: <input type='text' name='text'></input><br />
                     <input type='submit' value='Post Comment'></input>
                 </form>
-                <ul>
+                <ul className='commentContainer'>
                     {
                         this.props.game.comments.map((comment) => {
-                            const { username, text} = comments
+                            const { username, text} = comment
+                            console.log(comments)
                             return (
-                                <li key={comment._id} className='gameBox'>
-                                    {text}
+                                <li key={comment._id} className='commentBox'>
+                                    {comment.username} :<br/>
+                                    {comment.text}
                                 </li>
                             )
                         })

@@ -81,7 +81,7 @@ button:hover {
 
 .gameBox{
     width: 350px; 
-    border: 1px solid #ececec;
+    border: 10px solid #ececec;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -116,3 +116,22 @@ input[type=submit] {
     border-radius: 10%;
 }
 
+/* Comment Section */
+.commentContainer{
+    width: 350px; 
+    border: 10px solid #0088a9;
+    margin-bottom: 15px;
+    font-family: 'Games', sans-serif;
+    font-weight: 500; 
+    font-size: 16px; 
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.commentBox{
+    background-color: #504A4B;
+    border: solid; 
+    margin:auto;
+    padding: 10px; 
+    margin-bottom: 15px;
+}
