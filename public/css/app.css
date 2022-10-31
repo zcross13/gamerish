@@ -1,0 +1,118 @@
+@import url('http://fonts.cdnfonts.com/css/games');
+
+*{
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    background-color: #24252A;
+    font-family: 'Games', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+body{
+    margin:0px;
+    padding:0px;
+    font-family: 'Games', sans-serif;
+}
+
+li, a, button {
+    font-family: 'Games', sans-serif;
+    font-weight: 500; 
+    font-size: 16px; 
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center; 
+    padding: 30px 10%;
+}
+
+.title{
+    cursor: pointer;
+    margin-right:auto
+}
+
+.nav_links {
+    list-style: none; 
+}
+
+.nav_links li {
+    display: inline-block; 
+    padding: 0px 20px; 
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s; 
+}
+
+.nav_links li a:hover {
+    color: #0088a9
+}
+
+button {
+    margin-left:20px;
+    padding: 9px 25px; 
+    background: rgba(0,136,169,1);
+    border: none; 
+    border-radius: 50px;
+    cursor: pointer; 
+    transition: all 0.3s ease 0s; 
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0,8);
+}
+
+.games{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom:  1px solid rgba(0,0,0,0,.05)
+}
+
+.gameBox{
+    width: 350px; 
+    border: 1px solid #ececec;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.gameImg{
+    width:100%;
+    height: auto;
+} 
+
+a:hover {
+    margin-left:20px;
+    padding: 9px 25px; 
+    background: rgba(0,136,169,1);
+    border: none; 
+    border-radius: 50px;
+    cursor: pointer; 
+    transition: all 0.3s ease 0s; 
+}
+
+input [type=text]{
+    padding: .3em; 
+    color: #9b9b9b;
+    background-color: #ffffff;
+}
+
+
+input[type=submit] {
+    padding: .1em;
+    color:grey;
+    background: purple;
+    font-size: 1em;
+    border-radius: 10%;
+}
+

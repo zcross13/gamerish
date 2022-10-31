@@ -3,15 +3,35 @@ const Default = require('../layouts/Default')
 
 class Show extends React.Component {
     render() {
-        const game = this.props.game
+        const { _id, name, image, system, releaseDate, price } = this.props.game.game
+        const [...comments] = this.props.game.comments
+        console.log(comments)
         return (
-            <Default title={`${game.name} Show Page`}>
-                {game.name} <br />
-                {game.releaseDate} <br />
-                {game.console} <br />
-                <form action={`/games/${game._id}?_method=DELETE`} method='POST'>
-                    <input type='submit' value='DELETE' />
+            <Default title={`${name} Show Page`}>
+                <div>
+                    {name}<br />
+                    <img src={image} className='gameImg'></img><br />
+                    {system}<br />
+                    {releaseDate}<br />
+                    {price}
+                </div>
+                <form action={`/games/${_id}/new`} method='POST'>
+                    Username: <input type='text' name='username'></input><br />
+                    Comment: <input type='text' name='text'></input><br />
+                    <input type='submit' value='Post Comment'></input>
                 </form>
+                <ul>
+                    {
+                        this.props.game.comments.map((comment) => {
+                            const { username, text} = comments
+                            return (
+                                <li key={comment._id} className='gameBox'>
+                                    {text}
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
             </Default>
         )
     }

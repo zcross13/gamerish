@@ -1,24 +1,32 @@
 const express = require('express')
 const router = express.Router()
-const Game = require('../models/game.js')
-const dataController = require('./dataController')
-const viewController = require('./viewController')
+const gameDataController = require('./gameDataController')
+const gameViewController = require('./gameViewController')
+const commentDataController = require('./commentDataController')
 
 
-
+//Game Routes 
 // Index
-router.get('/', dataController.index, viewController.index)
+router.get('/', gameDataController.index, gameViewController.index)
 // New
-router.get('/new', viewController.newView)
+router.get('/new', gameViewController.newView)
 // Delete
-router.delete('/:id', dataController.delete, viewController.redirectHome)
+router.delete('/:id', gameDataController.delete, gameViewController.redirectHome)
 // Update
-router.put('/:id', dataController.update, viewController.redirectShow)
+router.put('/:id', gameDataController.update, gameViewController.redirectShow)
 // Create
-router.post('/', dataController.create, viewController.redirectShow)
+router.post('/', gameDataController.create, gameViewController.redirectHome)
 // Edit
-router.get('/:id/edit', dataController.show, viewController.edit)
+router.get('/:id/edit', gameDataController.grabGame, gameViewController.edit)
 // Show
-router.get('/:id', dataController.show, viewController.show)
+router.get('/:id', gameDataController.grabGame, gameViewController.show)
+
+
+//Comments Routes 
+
+// Create Route 
+router.post('/:id/new', commentDataController.create, gameViewController.redirectShow)
+
+
 
 module.exports = router

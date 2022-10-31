@@ -14,7 +14,7 @@ class New extends React.Component{
                     releaseDate: <input name='releaseDate'></input><br/>
                     price: <input name='price'></input>
                     console:<input name='console'></input><br/>
-                    <input type='submit'></input>
+                    <input type='submit' vaule='Submit Game'></input>
                 </form>
             </Default>
         )

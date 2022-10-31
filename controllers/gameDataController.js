@@ -1,6 +1,9 @@
 const Game = require('../models/game.js')
+const Comment = require('../models/comment.js')
+const { restart } = require('nodemon')
 
-const dataController = {
+
+const gameDataController = {
     // Index
     index(req, res, next) {
         Game.find({}, (err, allGames) => {
@@ -54,19 +57,30 @@ const dataController = {
         })
     },
     // Show 
-    show(req, res, next) {
-        Game.findById(req.params.id, (err, foundGame) => {
-            if (err) {
+    grabGame(req, res, next) {
+        Game.findById(req.params.id, (err, foundGame) =>{
+            Comment.find({}, (err, listComments) => {
+                if(err){
+                    res.status(404).send({
+                        msg:err.message, 
+                        output: 'Could not find comment'
+                    })
+                } else {
+                    res.locals.data.game={
+                        game: foundGame, 
+                        comments: listComments
+                    }
+                    next()
+                }
+            }) 
+            if(err){ 
                 res.status(404).send({
-                    msg: err.message,
-                    output: ' Could not find a game with that id'
+                    msg:err.message, 
+                    output: 'Could not find game with that ID'
                 })
-            } else {
-                res.locals.data.game = foundGame
-                next()
             }
         })
     }
 }
 
-module.exports = dataController
+module.exports = gameDataController

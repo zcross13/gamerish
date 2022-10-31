@@ -1,6 +1,6 @@
 const RESOURCE_PATH ='/games'
 
-const viewController = {
+const gameViewController = {
     index(req,res,next){
         res.render('games/Index', res.locals.data)
     }, 
@@ -17,8 +17,9 @@ const viewController = {
         res.redirect(RESOURCE_PATH)
     }, 
     redirectShow(req,res,next){
-        res.redirect(RESOURCE_PATH + `/${req.params.id}`)
+        const gameId = req.params.id || res.locals.data.game._id
+        res.redirect(`${RESOURCE_PATH}/${gameId}`)
     }
 }
 
-module.exports = viewController
+module.exports = gameViewController
