@@ -4,8 +4,7 @@ const gameDataController = require('./gameDataController')
 const gameViewController = require('./gameViewController')
 const commentDataController = require('./commentDataController')
 
-
-//Game Routes 
+// Game Routes
 // Index
 router.get('/', gameDataController.index, gameViewController.index)
 // New
@@ -21,12 +20,15 @@ router.get('/:id/edit', gameDataController.grabGame, gameViewController.edit)
 // Show
 router.get('/:id', gameDataController.grabGame, gameViewController.show)
 
+// Comments Routes
 
-//Comments Routes 
-
-// Create Route 
+// Create Route
 router.post('/:id/new', commentDataController.create, gameViewController.redirectShow)
 
+// Delete
+router.delete('/:id/comment', commentDataController.delete)
 
+// Edit 
+router.get('/:id/:id/edit', commentDataController.grabComment, gameViewController.redirectShow)
 
 module.exports = router

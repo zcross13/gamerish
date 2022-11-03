@@ -5,31 +5,36 @@ class Show extends React.Component {
     render() {
         const { _id, name, image, system, releaseDate, price } = this.props.game.game
         const [...comments] = this.props.game.comments
-        console.log(comments)
+        console.log(this.props.game.game)
         return (
-            <Default title={`${name} Show Page`}>
+            <Default title={`${name} Show Page`} game={this.props.game.game} comment= {this.props.game.comments}css='/css/Show.css'>
                 <div>
                     {name}<br />
-                    <img src={image} className='gameImg'></img><br />
+                    <img src={image} className='gameImg' /><br />
                     {system}<br />
                     {releaseDate}<br />
                     {price}
                 </div>
                 <form action={`/games/${_id}/new`} method='POST'>
-                    Username: <input type='text' name='username'></input><br />
-                    Comment: <input type='text' name='text'></input><br />
-                    <input type="hidden" name="gameId" value={_id} />
-                    <input type='submit' value='Post Comment'></input>
+                    Username: <input type='text' name='username' /><br />
+                    Comment: <input type='text' name='text' /><br />
+                    <input type='hidden' name='gameId' value={_id} />
+                    <input type='submit' value='Post Comment' />
                 </form>
                 <ul className='commentContainer'>
                     {
                         this.props.game.comments.map((comment) => {
-                            const { username, text} = comment
+                            const { username, text, _id, } = comment
                             console.log(comments)
                             return (
                                 <li key={comment._id} className='commentBox'>
-                                    {comment.username} :<br/>
+                                    {comment.username}:<br />
                                     {comment.text}
+                                    <div class='gameText'>
+                                        <form action={`/games/${comment._id}/comment?_method=DELETE`} method='POST'>
+                                            <input type='submit' value={`Delete Comment`} />
+                                        </form>
+                                    </div>
                                 </li>
                             )
                         })
@@ -40,4 +45,4 @@ class Show extends React.Component {
     }
 }
 
-module.exports = Show 
+module.exports = Show

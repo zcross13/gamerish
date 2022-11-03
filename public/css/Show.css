@@ -4,8 +4,9 @@
     box-sizing: border-box;
     margin: 0; 
     padding: 0; 
-    background-color: #24252A;
+    background-color:purple;
     font-family: 'Games', sans-serif;
+    text-align: center;
 }
 
 ul {
