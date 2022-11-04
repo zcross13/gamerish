@@ -22,8 +22,11 @@ const commentDataController = {
           msg: err.message
         })
       } else {
-        res.locals.data.comment = updatedComment
-        next()
+        res.locals.data.comment ={
+          comment: updatedComment
+        }
+        res.redirect(`/games/${updatedComment.gameId}`)
+        // next()
       }
     })
   },

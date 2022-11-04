@@ -13,15 +13,13 @@ class Default extends React.Component {
         <body>
           <header>
             <h1 className='title'>{title}</h1>
-            <nav>
-              <ul className='nav_links'>
+            <nav className='nav_links'>
+              <ul>
                 <li><a href='/games'>News</a></li>
                 <li><a href='/games/new'>Create a Post</a></li>
-                <li>{this.props.game ? <a href={`/games/${game._id}/edit`}>Edit Page</a> : ''}</li>
-                <li>{this.props.game ? <a href={`/games/${game._id}`}>Show Page</a> : ''}</li>
+                <li><a className='cta' href='#'><button>Contact</button></a></li>
               </ul>
             </nav>
-            <a className='cta' href='#'><button>Contact</button></a>
           </header>
           <div className='games'>
             {this.props.children}

@@ -3,10 +3,10 @@ const Default = require('../layouts/Default')
 
 class Edit extends React.Component {
   render () {
-    const { name, _id, image, releaseDate, price, console } = this.props.game.comment
+    const { name, _id, image, releaseDate, price, console } = this.props.game.game
     return (
       <Default title={`${name} Edit Page`} game={this.props.game}>
-        <form action={`/games/${_id}?_method=PUT`} method='POST'>
+        <form method='POST' action={`/games/${_id}?_method=PUT`}>
           Name: <input type='text' name='name' defaultValue={name} /><br />
           Image: <input type='text' name='image' defaultValue={image} /><br />
           Release Date: <input type='text' name='releaseDate' defaultValue={releaseDate} /><br />

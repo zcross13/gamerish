@@ -18,6 +18,7 @@ const gameDataController = {
   // Delete
   delete (req, res, next) {
     Game.findByIdAndDelete(req.params.id, (err, deletedGame) => {
+      Comment.find
       if (err) {
         res.status(400).send({
           msg: err.message

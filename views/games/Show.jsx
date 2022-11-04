@@ -7,7 +7,7 @@ class Show extends React.Component {
         const [...comments] = this.props.game.comments
         console.log(this.props.game.game)
         return (
-            <Default title={`${name} Show Page`} game={this.props.game.game} comment= {this.props.game.comments}css='/css/Show.css'>
+            <Default title={`${name} Show Page`} css='/css/Show.css'>
                 <div>
                     {name}<br />
                     <img src={image} className='gameImg' /><br />
@@ -24,7 +24,7 @@ class Show extends React.Component {
                 <ul className='commentContainer'>
                     {
                         this.props.game.comments.map((comment) => {
-                            const { username, text, _id, } = comment
+                            const { username, text, gameId } = comment
                             console.log(comments)
                             return (
                                 <li key={comment._id} className='commentBox'>
@@ -34,6 +34,7 @@ class Show extends React.Component {
                                         <form action={`/games/${comment._id}/comment?_method=DELETE`} method='POST'>
                                             <input type='submit' value={`Delete Comment`} />
                                         </form>
+                                        <a href={`/games/${gameId}/${comment._id}/editComment`}><input type='button'/>Edit</a>
                                     </div>
                                 </li>
                             )
