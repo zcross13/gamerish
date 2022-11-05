@@ -5,10 +5,9 @@ class Index extends React.Component {
   render () {
     return (
       <Default title='Gamerish'>
-        <p>Welcome to Gamerish. A site where you can post and 
-          talk all stuff gamerish about your favorite games. 
-          Start by clicking one of your favorite games title below, 
-          and tell us the pros and cons. 
+        <p>Welcome to Gamerish. Discuss what you like about all the things 
+          you love about your favorite game. OR  
+          Rant about what you don't like. Talk about all things GAMERISH. 
         </p>
         <ul>
           {

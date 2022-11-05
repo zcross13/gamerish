@@ -2,7 +2,7 @@
 
 ## ***Site Link*** *https://zcross13.github.io/pacman/*
 
-### GAMERISH is a gaming review blog site. Create a post, to learn more about a game. People can commit the pros and cons to the game. 
+### GAMERISH is a gaming review blog site. Create a post. Discuss what you like about aginst. Rant about what you don't. Talk about all things gamerish. 
 
 This project is demostrates a understanding of the table below: 
 |   #	|   Action	|   URL	|  HTTP Verb. 	|   JSX view filename	|   mongoose method	|
@@ -69,10 +69,10 @@ Trello Board:
 [Trello Board](https://trello.com/b/Xw2PkESb/gaming-review-site)
 
 
-[Wireframes]()
+![Wireframes!](images/wireframe.png)
 
-[ERD]()
-https://lucid.app/lucidchart/46a24922-58da-4479-a6c1-336a1890b730/edit?viewport_loc=15%2C275%2C1552%2C807%2CpA55P9GdaM8Z&invitationId=inv_6d92b718-9ff6-4f4d-afe9-61cf8a06ab33
+![ERD!](images/ERD.png)
+
 
 ## MAIN Mongoose Model
 

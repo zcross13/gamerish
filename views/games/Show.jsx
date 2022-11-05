@@ -9,11 +9,11 @@ class Show extends React.Component {
         return (
             <Default title={`${name} Show Page`} css='/css/Show.css'>
                 <div className='gameBox'>
-                    {name}<br />
                     <img src={image} className='gameImg' /><br />
-                    {system}<br />
-                    {releaseDate}<br />
-                    {price}
+                    Title:{name}<br />
+                    Console:{system}<br />
+                    Release Date:{releaseDate}<br />
+                    USD:{price}
                 </div>
                 <form action={`/games/${_id}/new`} method='POST'>
                     Username: <input type='text' name='username' /><br />
