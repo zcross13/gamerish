@@ -1,6 +1,6 @@
 # **GAMERISH :joystick:**
 
-## ***Site Link*** *https://zcross13.github.io/pacman/*
+
 
 ### GAMERISH is a gaming review blog site. Create a post. Discuss what you like about aginst. Rant about what you don't. Talk about all things gamerish. 
 
