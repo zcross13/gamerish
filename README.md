@@ -74,10 +74,10 @@ For development, you will need Node.js installed in your environemnt along with 
 Trello Board:
 [Trello Board](https://trello.com/b/Xw2PkESb/gaming-review-site)
 
-*Wireframe*
+## *Wireframe*
 ![Wireframes!](images/wireframe.png)
 
-*Entity–relationship model*
+## *Entity–relationship model*
 ![ERD!](images/ERD.png)
 
 
