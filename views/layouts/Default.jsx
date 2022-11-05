@@ -12,11 +12,12 @@ class Default extends React.Component {
         </head>
         <body>
           <header>
-          <h1 className='title'>{title} </h1>
+          
             <nav className='nav_links'>
               <ul>
+              <h1 className='title'>{title} </h1>
                 <li><a href='/games'>News</a></li>
-                {/* <li><a href='/games/new'>Create a Post</a></li> */}
+                <li><a href='/games/new'>Create a Post</a></li>
                 {/* <li><a className='cta' href='#'><button>Contact</button></a></li> */}
               </ul>
             </nav>
