@@ -40,10 +40,10 @@ ul {
 
 h1 {
     color: #05bbaa;
-    font-size: 20px;
-    padding: 8px;
+    font-size: 50px;
+    /* padding: px; */
     font-family: 'Games', sans-serif;
-    font-size: 50px
+
 }
 
 /* Index Page */
@@ -58,7 +58,7 @@ h1 {
 
 .gameContainer {
     width: 350px;
-    border: 10px solid #eb5951;
+    border: 10px solid #1a2c54;
     text-align: center;
     margin-bottom: 15px;
     background-color: #eb5951;
@@ -77,4 +77,22 @@ li, a, button {
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+}
+
+span {
+    color: #05bbaa;
+    font-family: 'Games', sans-serif;
+    cursor: pointer;
+    margin-right:auto;
+    font-size:25px;
+}
+
+p {
+    font-family: system-ui;
+    /* width: 350px; */
+    border: 10px solid #1a2c54;
+    /* text-align: center; */
+    /* margin-bottom: 15px; */
+    background-color:  #b45dbb;
+
 }

@@ -145,6 +145,7 @@ My biggest takeaway was gaining a deeper understanding of objects. I'm pretty su
 - :pushpin: Authorization to only allow an admin to upload games. 
 - :pushpin: Third party API to provide data regarding current ratings and prices. *Twich has a third party API, for free if you have a twicth memeber and set up two step authentication.*
 - :pushpin: Play around with the CSS to make website more appealing 
+- :pushpin: Develop a navigation bar with for different console that contains games for that specific console. 
 
 ## Contributions:
 
