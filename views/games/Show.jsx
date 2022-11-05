@@ -8,7 +8,7 @@ class Show extends React.Component {
         console.log(this.props.game.game)
         return (
             <Default title={`${name} Show Page`} css='/css/Show.css'>
-                <div>
+                <div className='gameBox'>
                     {name}<br />
                     <img src={image} className='gameImg' /><br />
                     {system}<br />

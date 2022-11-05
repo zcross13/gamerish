@@ -1,17 +1,80 @@
-.nav_links ul{
+@import url('http://fonts.cdnfonts.com/css/games');
+
+body {
+    font-family: 'Games', sans-serif;
+    background-color: #6B5B95
+}
+
+ul {
     list-style-type: none;
-    margin:0;
-    padding: 20px; 
-    overflow: hidden; 
-    background-color: #666;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+
+/* Nav Bar */
+
+.nav_links ul {
+    margin: auto; 
 }
 
 .nav_links li {
-    float: left 
+    border-right: 1px solid #bbb;
+    float: left;
 }
 
-.nav_links a{
-    display: block; 
-    padding: 8px; 
-    background-color: #dddddd;
+.nav_links a {
+    transition: all 0.3s ease 0s;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav_links a:hover {
+    background-color: #111;
+}
+
+h1 {
+    color: #05bbaa;
+    font-size: 20px;
+    padding: 8px;
+    font-family: 'Games', sans-serif;
+    font-size: 50px
+}
+
+/* Index Page */
+.games {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0, .05)
+}
+
+.gameContainer {
+    width: 350px;
+    border: 10px solid #eb5951;
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: #eb5951;
+}
+
+.gameImg {
+    width: 100%;
+    height: auto;
+}
+
+li, a, button {
+    border: none;
+    color: white;
+    margin: 10px 10px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
 }
