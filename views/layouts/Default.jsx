@@ -2,7 +2,7 @@ const React = require('react')
 
 class Default extends React.Component {
   render () {
-    const { game, title, } = this.props
+    const { title } = this.props
     console.log(this.props)
     return (
       <html>
@@ -12,7 +12,7 @@ class Default extends React.Component {
         </head>
         <body>
           <header>
-          <h1 className='title'>{title} </h1>
+            <h1 className='title'>{title} </h1>
             <nav className='nav_links'>
               <ul>
                 <li><a href='/games'>News</a></li>

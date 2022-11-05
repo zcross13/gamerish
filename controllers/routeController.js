@@ -12,7 +12,7 @@ router.get('/', gameDataController.index, gameViewController.index)
 router.get('/new', gameViewController.newView)
 // Delete
 router.delete('/:id', gameDataController.delete, gameViewController.redirectHome)
-// Comment Update 
+// Comment Update
 router.put('/:id/comment', commentDataController.update)
 // Update
 router.put('/:id', gameDataController.update, gameViewController.redirectShow)
@@ -31,8 +31,7 @@ router.post('/:id/new', commentDataController.create, gameViewController.redirec
 // Delete
 router.delete('/:id/comment', commentDataController.delete)
 
-
-// Edit 
+// Edit
 router.get('/:id/:id/editComment', commentDataController.grabComment, commentViewController.edit)
 
 module.exports = router
