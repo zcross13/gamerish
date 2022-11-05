@@ -2,7 +2,7 @@
 
 
 
-### GAMERISH is a gaming review blog site. Create a post. Discuss what you like about aginst. Rant about what you don't. Talk about all things gamerish. 
+### A CRUD base application. GAMERISH is a gaming review blog site. Create a post. Discuss what you like about aginst. Rant about what you don't. Talk about all things gamerish. 
 
 
 The project demostration a knowledge in the following... 
