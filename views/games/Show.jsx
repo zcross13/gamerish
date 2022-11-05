@@ -11,7 +11,7 @@ class Show extends React.Component {
                 <div className='gameBox'>
                     <img src={image} className='gameImg' /><br />
                     Title:{name}<br />
-                    Console:{system}<br />
+                    Console: Nitendo Switch <br/>
                     Release Date:{releaseDate}<br />
                     USD:{price}
                 </div>

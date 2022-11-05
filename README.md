@@ -4,18 +4,9 @@
 
 ### GAMERISH is a gaming review blog site. Create a post. Discuss what you like about aginst. Rant about what you don't. Talk about all things gamerish. 
 
-This project is demostrates a understanding of the table below: 
-|   #	|   Action	|   URL	|  HTTP Verb. 	|   JSX view filename	|   mongoose method	|
-|---	|---	    |---	|---	        |---	                |---	            |
-|   1	|  Index 	|  / 	|  get 	        |   Index.jsx	            |   Log.find()	            |
-|   2	|  New 	    |  /new |  get 	        |   New.jsx	                |   none	            |
-|   3	|  Delete 	|  /:id |  delete       |   none	                |   Log.findByIdAndDelete()	            |
-|   4	|  Update 	|  /:id	|  put 	        |   none	                |   Log.findByIdAndUpdate()	            |
-|   5	|  Create 	|  /	|  post         |   none	                |  Log.create(req.body) 	            |
-|   6	|  Edit 	|/:id/edit|get   	    |   Edit.jsx                |   Log.findById()	            |
-|   7	|  Show 	|  /:id	|  get  	    |   Show.jsx                |    Log.findById()		            |  
 
-The following technologies are used:  
+The project demostration a knowledge in the following... 
+
 1. CRUD 
 2. Node.js
 3. Express
@@ -25,6 +16,18 @@ The following technologies are used:
 7. HTML
 8. CSS
 9. React
+
+### Restful Route Table 
+
+|   #	|   Action	|   URL	|  HTTP Verb. 	|   JSX view filename	|   mongoose method	|
+|---	|---	    |---	|---	        |---	                |---	            |
+|   1	|  Index 	|  / 	|  get 	        |   Index.jsx	            |   Log.find()	            |
+|   2	|  New 	    |  /new |  get 	        |   New.jsx	                |   none	            |
+|   3	|  Delete 	|  /:id |  delete       |   none	                |   Log.findByIdAndDelete()	            |
+|   4	|  Update 	|  /:id	|  put 	        |   none	                |   Log.findByIdAndUpdate()	            |
+|   5	|  Create 	|  /	|  post         |   none	                |  Log.create(req.body) 	            |
+|   6	|  Edit 	|/:id/edit|get   	    |   Edit.jsx                |   Log.findById()	            |
+|   7	|  Show 	|  /:id	|  get  	    |   Show.jsx                |    Log.findById()		            |  
 
 ## Requirements/Getting Started 
 For development, you will need Node.js installed in your environemnt along with the following... 
@@ -61,20 +64,24 @@ For development, you will need Node.js installed in your environemnt along with 
   }
 }
 ```
-Remember to go to the [official Node.js website](https://nodejs.org/) and download the installer.
+
+### Node Resources
+- [official Node.js website](https://nodejs.org/) and download the installer.
+- [npmjs](https://www.npmjs.com/) *Remember look up all npm install*
 
 ## Project Planning Phase 
 
 Trello Board:
 [Trello Board](https://trello.com/b/Xw2PkESb/gaming-review-site)
 
-
+*Wireframe*
 ![Wireframes!](images/wireframe.png)
 
+*Entity–relationship model*
 ![ERD!](images/ERD.png)
 
 
-## MAIN Mongoose Model
+## Main Mongoose Model **Comment Model**
 
 ```js 
 const mongoose = require('mongoose')
@@ -92,8 +99,7 @@ const Comment = mongoose.model('Comment', commentSchema)
 module.exports = Comment
 ```
 
-## FAVORITE JSX
-
+## Favorite JSX **Show.jsx** 
 ```js
 <ul className='commentContainer'>
                     {
@@ -117,7 +123,7 @@ module.exports = Comment
                 </ul>
 ```
 
-## CONTROLLER FOR MAIN Model 
+## Controller for Main Model **use both** 
 
 ```js 
 const gameDataController = require('./gameDataController')
